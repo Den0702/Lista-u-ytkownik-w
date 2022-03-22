@@ -1,10 +1,12 @@
 import React from 'react';
 
-function UserForm(props) {
+function Form(props) {
     
     function handleSubmit(event) {
         event.preventDefault();
-        props.addUser();
+        let input = document.querySelector('input');
+        let name = input.value;
+        props.addUser(name);
     }
     
     return (
@@ -12,11 +14,10 @@ function UserForm(props) {
             <input
                 type="text"
                 placeholder="Enter name"
-                id="new-user"
             /><br/>
             <button type="submit">Dodaj użytkownika</button>
         </form>
     );
 }
 
-export default UserForm;
+export default Form;

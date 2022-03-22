@@ -1,18 +1,16 @@
 import React from 'react';
 
-function UsersList(props) {
-
+function User(props) {
 
     return (
-        <div className="users-list">
-            <li>Heniu</li>
-            <li>Hans</li>
-            <li>Staś</li>
-        </div>
+        <li>
+            {props.name}
+            <span onClick={() => props.deleteUser(props.id)}>X</span>
+        </li>    
     );
 }
 
-export default UsersList;
+export default User;
 
 // function Counter(props) {
 
